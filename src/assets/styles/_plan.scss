@@ -1,0 +1,17 @@
+.plan {
+  width: 100%;
+  min-height: 100vh;
+  background-color: rgb(230, 235, 244);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+
+  &-wrapper {
+    display: grid;
+    grid-template-columns: 8fr 5fr;
+    grid-column-gap: 75px;  
+    justify-content: center;;
+    min-height: 100%;
+  }
+}

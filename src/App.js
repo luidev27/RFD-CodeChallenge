@@ -1,6 +1,8 @@
+import Plan from './components/Plan/index';
+
 const App = () => {
   return (
-    <div />
+    <Plan />
   );
 }
 
