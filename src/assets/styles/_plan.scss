@@ -13,7 +13,6 @@
     grid-column-gap: 75px;  
     justify-content: center;;
     min-height: 100%;
-
     .plan-info {
       border-radius: 10px;
       background-color: white;
@@ -182,6 +181,159 @@
         font-weight: 500;
         outline: none;
         cursor: pointer;
+      }
+    }
+    .user {
+      display: grid;
+      grid-template-rows: 1fr 1fr;
+      grid-row-gap: 60px;
+
+      > div {
+        width: 100%;
+        border-radius: 10px;
+        background-color: white;
+        box-shadow: 0px 2px 50px 0px rgba(110,130,208,0.18);
+      }
+
+      .user-info {
+        border: 5px solid white;
+        #user-background {
+          height: 140px;
+          width: 100%;
+          background-repeat: no-repeat;
+          background-size: cover;
+          border-radius: 8px 8px 0 0;
+        }
+        #user-image {
+          margin-top: -80px;
+          margin-bottom: 20px;
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          img {
+            width: 130px;
+            height: 130px;
+            border-radius: 50%;
+            border: 5px solid white;
+          }
+        }
+        #user-name {
+          text-align: center;
+          line-height: 30px;
+        }
+        #user-location {
+          font-size: 20px;
+          font-weight: 500;
+          line-height: 20px;
+          text-align: center;
+          color: $primary-text-color;
+        }
+        #user-level {
+          display: flex;
+          justify-content: center;
+          margin-bottom: 50px;
+          > button {
+            height: 40px;
+            width: 130px;
+            font-size: 20px;
+            border: none;
+            border-radius: 25px;
+            color: white;
+            background-color: $primary-color;
+            outline: none;
+          }
+        }
+        #user-status {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          grid-column-gap: 80px;
+          padding: 0 50px;
+          .status-item {
+            > p {
+              &:first-child {
+                font-size: 20px;
+                font-weight: 500;
+                color: $primary-text-color;
+                margin: 0;
+              }
+              &:last-child {
+                font-size: 32px;
+                font-weight: 500;
+                margin: 0;
+              }
+            }
+          }
+        }
+      }
+      .user-pricing {
+        padding: 40px;
+        .setup-pricing-msg {
+          margin: 0;
+          margin-bottom: 40px;
+          font-size: 20px;
+          font-weight: 400;
+          color: $primary-text-color;
+          line-height: 30px;
+        }
+        #price-type {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          grid-column-gap: 25px;
+          margin-bottom: 50px;
+          > button {
+            height: 75px;
+            border-radius: 5px;
+            border-width: 2px;
+            border-style: solid;
+            border-color: $primary-text-color;
+            font-size: 20px;
+            font-weight: 500;
+            outline: none;
+            cursor: pointer;
+          }
+          .price-btn-active {
+            border-color: $primary-color;
+            background-color: rbga($primary-color, 0.3);
+          }
+        }
+        #current-price {
+          font-size: 40px;
+          font-weight: 500;
+          sub, sup {
+            font-size: 20px;
+            font-weight: 500;
+            color: $primary-text-color;
+          }
+        }
+        #price-slider {
+          p {
+            color: $primary-text-color;
+            font-size: 20px;
+            font-weight: 500;
+            margin: 0;
+          }
+          .ant-slider-dot {
+            opacity: 0;
+          }
+          .ant-slider-track {
+            background-color: $primary-color;
+            height: 7px;
+          }
+          .ant-slider-step, .ant-slider-rail {
+            height: 7px !important;
+          }
+          .ant-slider-handle {
+            width: 35px;
+            height: 35px;
+            margin-top: -14px;
+            background-color: $primary-color;
+            border: 5px solid white;
+            box-shadow: 0 0 3px $primary-color;
+            &-click-focused {
+              display: block;
+            }
+          }
+        }
       }
     }
   }

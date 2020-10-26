@@ -76,6 +76,57 @@ const Plan = () => {
           </div>
           <button id="proceed-btn">Proceed to payment <ArrowRightOutlined/></button>
         </div>
+        <div className="user">
+          <div className="user-info">
+            <div id="user-background" style={{
+              backgroundImage: `url(${BackgroundImage})`
+            }}></div>
+            <div id="user-image">
+              <img src={UserImage} alt="user" />
+            </div>
+            <h1 id="user-name">Filip Martin Jose</h1>
+            <p id="user-location">Los Angeles</p>
+            <div id="user-level">
+              <button>Pro Level</button>
+            </div>
+            <div id="user-status">
+              <div className="status-item">
+                <p>Followers</p>
+                <p>980</p>
+              </div>
+              <div className="status-item">
+                <p>Projects</p>
+                <p>142</p>
+              </div>
+              <div className="status-item">
+                <p>Rank</p>
+                <p>129</p>
+              </div>
+            </div>
+          </div>
+          <div className="user-pricing">
+            <h1>Set up your pricing</h1>
+            <p className="setup-pricing-msg">Please set up your hourly or fixed rate so that <br/>the client is aware of your pricing.</p>
+            <div id="price-type">
+              <button className={hourly ? 'price-btn-active' : ''} onClick={() => setHourly(true)}><ClockCircleOutlined/> Hourly</button>
+              <button className={!hourly ? 'price-btn-active' : ''} onClick={() => setHourly(false)}><FileOutlined /> Fixed</button>
+            </div>
+            {
+              hourly && <p id="current-price"><sup>$ </sup>{ price }<sub> / hour</sub></p>
+            }
+            {
+              !hourly && <p id="current-price"><sup>$ </sup>{ price }</p>
+            }
+            <div id="price-slider">
+              <Slider
+                marks={priceMarks}
+                min={20}
+                max={300}
+                onChange={(value) => setPrice(value)}
+              />
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   )
