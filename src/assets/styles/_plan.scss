@@ -13,5 +13,176 @@
     grid-column-gap: 75px;  
     justify-content: center;;
     min-height: 100%;
+
+    .plan-info {
+      border-radius: 10px;
+      background-color: white;
+      box-shadow: 0px 2px 50px 0px rgba(110,130,208,0.18);
+      padding: 60px 60px 50px;
+      .upgrading-plan-msg {
+        margin: 0;
+        margin-bottom: 50px;
+        font-size: 24px;
+        font-weight: 400;
+        color: $primary-text-color;
+        line-height: 30px;
+      }
+      .current-plan {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+        border: 2px solid $primary-color;
+        background-color: rgba($primary-color, 0.1);
+        border-radius: 5px;
+        margin-bottom: 50px;
+        .plan-property {
+          display: flex;
+          .yacht {
+            width: 95px;
+            height: 95px;
+            background-color: $primary-color;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 5px;
+            margin-right: 25px;
+          }
+          .property {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            h2 {
+              margin: 0;
+            }
+            a {
+              text-decoration: none;
+              color: $primary-color;
+              text-transform: uppercase;
+              font-size: 20px;
+              font-weight: 500;
+            }
+          }
+        }
+        .plan-price {
+          font-size: 48px;
+          font-weight: 500;
+          sup {
+            font-size: 24px;
+            font-weight: 500;
+            color: $primary-text-color;
+          }
+          sub {
+            font-size: 24px;
+            color: rgba($primary-color, 0.3)
+          }
+        }
+      }
+      #payement-detail {
+        margin-bottom: 40px;
+      }
+      .credit-card {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 40px;
+        .cc-info {
+          display: flex;
+          .cc-image {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: $primary-bg-color;
+            margin-right: 25px;
+            width: 90px;
+            height: 60px;
+            border-radius: 5px;
+          }
+          .cc-hint {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            h3 {
+              margin: 0;
+              font-size: 24px;
+              line-height: 22px;
+            }
+            span {
+              color: $primary-text-color;
+              font-size: 20px;
+              font-weight: 500;
+            }
+          }
+        }
+        .cc-input {
+          #cvc-edit {
+            border-width: 2px !important;
+            border-style: solid !important;
+            border-color: $primary-text-color !important;
+            border-radius: 6px !important;
+            &:focus {
+              border-color: $primary-color !important;
+            }
+          }
+          input[type=text] {
+            width: 95px;
+            height: 50px;
+            padding: 15px;
+            font-size: 20px;
+            font-weight: 500;
+            outline: none;
+            &::placeholder {
+              color: $primary-text-color;
+            }
+          }
+        }
+      }
+      .add-payment-method {
+        margin-bottom: 50px;
+        a {
+          text-decoration: none;
+          text-transform: uppercase;
+          color: $primary-color;
+          font-size: 20px;
+          font-weight: 500;
+        }
+      }
+      .email-address {
+        width: 100%;
+        margin-bottom: 45px;
+        #email-address {
+          border-width: 2px !important;
+          border-style: solid !important;
+          border-color: $primary-text-color !important;
+          border-radius: 6px !important;
+          &:focus {
+            border-color: $primary-color !important;
+          }
+        }
+        input {
+          width: 100%;
+          height: 70px;
+          padding: 28px;
+          font-size: 24px;
+          font-weight: 500;
+          outline: none;
+          &::placeholder {
+            color: $primary-text-color;
+          }
+        }
+      }
+      #proceed-btn {
+        height: 110px;
+        width: 100%;
+        border: none;
+        border-radius: 5px;
+        background-color: $primary-color;
+        color: white;
+        font-size: 28px;
+        font-weight: 500;
+        outline: none;
+        cursor: pointer;
+      }
+    }
   }
 }
